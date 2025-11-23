@@ -2,6 +2,7 @@
 let animals;
 let panel_class;
 
+
 const setUp = () => {
   console.log("in setup");
   // Create a different border around the login box
