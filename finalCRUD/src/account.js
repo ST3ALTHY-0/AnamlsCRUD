@@ -245,6 +245,14 @@ const createHandler = () => {
       image: "genericdog.jpg"
     };
 
+    // if we  have a picture of the entered name  and  breed use the real pic rather  than generic
+    const duplicate = animals.find(a =>
+      a.animal_name == newAnimal.animal_name && a.breed == newAnimal.breed
+    );
+    if (duplicate) {
+      newAnimal.image  = duplicate.image;
+    }
+
     console.log("------->>>>", newAnimal);
     animals.push(newAnimal);
     console.log(animals);
